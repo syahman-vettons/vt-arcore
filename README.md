@@ -20,12 +20,14 @@ or
     - Add `new VtArcorePackage()` to the list returned by the `getPackages()` method
 
 2.. Append the following lines to `android/settings.gradle`:
+
   	```
   	include ':vt-arcore'
   	project(':vt-arcore').projectDir = new File(rootProject.projectDir, 	'../node_modules/vt-arcore/android')
   	```
     
 3. Insert the following lines inside the dependencies block in
+
    `android/app/build.gradle`:
 
     ```
