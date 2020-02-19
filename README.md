@@ -18,22 +18,19 @@ or
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
     - Add `import com.vtarcore.VtArcorePackage;` to the imports at the top of the file
     - Add `new VtArcorePackage()` to the list returned by the `getPackages()` method
-
-2.. Append the following lines to `android/settings.gradle`:
-
-  	```
-  	include ':vt-arcore'
-  	project(':vt-arcore').projectDir = new File(rootProject.projectDir, 	'../node_modules/vt-arcore/android')
-  	```
     
-3. Insert the following lines inside the dependencies block in
+2. Append the following lines to `android/settings.gradle`:
+```
+include ':vt-arcore'
+project(':vt-arcore').projectDir = new File(rootProject.projectDir, 	'../node_modules/vt-arcore/android')
+```
 
-   `android/app/build.gradle`:
+3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+```
+implementation project(':vt-arcore')
+```
 
-    ```
-      implementation project(':vt-arcore')
-    ```
-    
+
 ## Usage
 ```javascript
 import ARView from 'vt-arcore';
@@ -46,3 +43,4 @@ let remoteURL = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Mode
  */
 ARView.instantGo(remoteURL);
 ```
+
