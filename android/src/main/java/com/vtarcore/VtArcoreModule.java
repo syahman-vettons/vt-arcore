@@ -35,7 +35,6 @@ public class VtArcoreModule extends ReactContextBaseJavaModule {
     public void instantGo(String remoteURL){
         setURL(remoteURL);
         goToAR();
-        getCurrentActivity().finish();
     }
 
     @ReactMethod
@@ -46,7 +45,6 @@ public class VtArcoreModule extends ReactContextBaseJavaModule {
     private void setURL(String remoteURL) {
         assetResizable = true;
         resizable = "&resizable=" + assetResizable;
-//        url = "https://27b0dad5.ngrok.io/KudaRotan.gltf";
         mode = "?mode=ar_preferred";
         modelURL = remoteURL + mode + resizable;
         Log.d("vt-arcore", "setURL: " + modelURL );
@@ -57,11 +55,5 @@ public class VtArcoreModule extends ReactContextBaseJavaModule {
         sceneViewerIntent.setData(Uri.parse(modelURL));
         sceneViewerIntent.setPackage("com.google.android.googlequicksearchbox");
         getCurrentActivity().startActivity(sceneViewerIntent);
-    }
-
-    @ReactMethod
-    public void sampleMethod(String stringArgument, int numberArgument, Callback callback) {
-        // TODO: Implement some actually useful functionality
-        callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
     }
 }
