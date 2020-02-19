@@ -1,5 +1,12 @@
 import { NativeModules } from 'react-native';
 
-const { VtArcore } = NativeModules;
+const NativeARView = NativeModules.ARView;
 
-export default VtArcore;
+export default class ARView {
+    /** Download natively and Display the AR (Experimental)
+     * @param {*} remoteURL URL of the 3D Model File
+     */
+    static instantGo(remoteURL){
+      NativeARView.instantGo(remoteURL);
+    }
+}
