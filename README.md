@@ -2,11 +2,11 @@
 
 ## Getting started
 
-`$ npm install vt-arcore --save`
+`$ npm install https://github.com/syahman-vettons/vt-arcore --save`
 
 or
 
-`$ yarn add vt-arcore`
+`$ yarn add https://github.com/syahman-vettons/vt-arcore`
 
 
 ### Mostly automatic installation
@@ -24,6 +24,7 @@ or
   	include ':vt-arcore'
   	project(':vt-arcore').projectDir = new File(rootProject.projectDir, 	'../node_modules/vt-arcore/android')
   	```
+    
 3. Insert the following lines inside the dependencies block in
    `android/app/build.gradle`:
 
