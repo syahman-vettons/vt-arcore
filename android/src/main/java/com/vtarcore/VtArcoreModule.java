@@ -46,7 +46,7 @@ public class VtArcoreModule extends ReactContextBaseJavaModule {
         assetResizable = true;
         resizable = "&resizable=" + assetResizable;
         mode = "&mode=ar_preferred";
-        intentURL = "https://arvr.google.com/scene-viewer/1.0?file="
+        intentURL = "https://arvr.google.com/scene-viewer/1.0?file=";
         modelURL = intentURL + remoteURL + mode + resizable;
         Log.d("vt-arcore", "setURL: " + modelURL );
     }
