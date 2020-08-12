@@ -18,6 +18,7 @@ public class VtArcoreModule extends ReactContextBaseJavaModule {
     String resizable;
     String url;
     String modelURL;
+    String intentURL;
 
     private final ReactApplicationContext reactContext;
 
