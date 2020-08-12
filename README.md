@@ -1,6 +1,6 @@
 # vt-arcore
 
-### Version 1.0.2
+### Version 1.0.3
 vt-arcore is an Android AR module for VT. Uses Scene Viewer to display the GLTF file in Augmented Reality. This module does handle the downloading of the 3D file.
 
 ## Getting started
